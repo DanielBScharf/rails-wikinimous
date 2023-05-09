@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+<p>
+<%= link_to '🗑', article_path(@article), class: 'btn btn-light', data: { turbo_method: :delete, turbo_confirm: "Delete #{@article.title}?" } %>
+</p>
+<h3>Edit Article</h3>
+<p><%= link_to 'edit', edit_article_path(@article) %></p>
